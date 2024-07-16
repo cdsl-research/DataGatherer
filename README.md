@@ -2,7 +2,11 @@
 複数のESP32からソケット通信でデータを受信するプログラム
 
 ## Overview
-This project consists of scripts for setting up a microcontroller (like an ESP32) to manage network connections and run a simple web server. The main components are boot.py for network configuration and ch_main.py for handling HTTP server functionality.
+This project consists of scripts for setting up a microcontroller (like an ESP32) to manage network connections and run a simple server. The main components are boot.py for network configuration and ch_main.py for handling HTTP server functionality.
+
+You can get MicroPython library for INA219 from this link below:
+
+<https://github.com/chrisb2/pyb_ina219.git> 
 
 ## Files
 ### boot.py
