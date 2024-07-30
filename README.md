@@ -111,6 +111,25 @@ WEBREPL_PASS = 'your_webrepl_password'
 1. Upload `boot.py`, `ch_main.py`, and `password.py` to your ESP32.
 2. Execute the `boot.py` script. This will configure the network settings and start the web server.
 
+## Output - CH
+```
+booted system
+----  AP is activated -----
+('192.168.4.1', '255.255.255.0', '192.168.4.1', '0.0.0.0')
+Server started at 192.168.4.1:80
+accepting......
+```
+
+CH accepts message from multiple nodes. 
+```
+connected from:  ('192.168.4.2', 52469)
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+accepting......
+connected from:  ('192.168.4.3', 64312)
+hello from F
+accepting......
+```
+
 
 ## Usage - CM
 
@@ -119,3 +138,17 @@ WEBREPL_PASS = 'your_webrepl_password'
 ・Run cm_main.py to establish Wi-Fi connectivity and start sending data to the server.
 
 ・Run get_current.py to start logging voltage, current, and power measurements to a CSV file.
+
+## Output - CM
+```
+>>> ---ESPのWi-Fi[ESP_F]に接続��ます---
+---- wifi is connected ----
+----[192.168.4.2]に接続----
+Wi-Fi connected
+Connected to 192.168.4.1:80
+Sent: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+```
+The output CSV file
+
+<img width="285" alt="image" src="https://github.com/user-attachments/assets/95decdfa-d749-44fd-a2d0-bde2a8c5a9db">
+
